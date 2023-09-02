@@ -1,0 +1,425 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&family=Work+Sans:ital,wght@0,400;1,300&display=swap');
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Css variable */
+:root{
+    --heading:rgb(0 10 45);
+    --para:#777;
+    --para-tint:#e4e4e4;
+    --white:#fff;
+    --black:#212529;
+    --helper:#8490ff;
+    --helper-tint:#f3f4ff;
+    --bg:rgb(251, 249, 255);
+    --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, 
+    rgb(98 189 252) 100%);
+    --gradientSupport:-webkit-linear-gradient(0deg, rgb(132 144 255)0%
+    rgb(98 189 252) 100%);
+    --shadpw:0px 0px 20px 0px rgb(132 144 255 / 20%);
+    --shadowsupport:0px 20px 20px 0px rgb(132 144 255 / 30%)
+}
+html{
+ font-size: 62.5%;
+ scroll-behavior: smooth;
+}
+h1,h2,h3,h4{
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    color: var(--heading);
+    font-size: 6rem;
+    font-weight: 600;
+}
+h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+p{
+    color: var(--para);
+    line-height: 1.6;
+    font-size: 1.7rem;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+/* -------------Header section---------------- */
+.header{
+   padding: 0 4.8rem;
+   height: 10rem;
+   background-color: rgba(0, 157, 255, 0.164);  
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.header .logo{
+    font-weight: 100;
+}
+.navbar-lists{
+    display: flex;
+    gap: 4.8rem;
+}
+.navbar-link:link,
+.navbar-link:visited{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color:var(--black);
+    transition: color 0.3s linear;
+    /* font-family: 'Poppins', sans-serif; */
+}
+.navbar-link:hover,
+.navbar-link:active{
+   color: var(--helper); 
+}
+
+/* -------------Hero section---------------- */
+.section{
+    padding: 9rem 0;
+}
+.container{
+    max-width: 130rem;
+    margin: 0 auto;
+}
+.grid{
+    display: grid;
+    gap: 9rem;
+}
+.grid-two-coloumn{
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid-three-coloumn{
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-four-coloumn{
+    grid-template-columns: repeat(4, 1fr);
+}
+.btn{
+    background: rgba(0, 0, 255, 0.66);
+    padding: 1.6rem 3.2rem;
+    border: none;
+    color: var(--helper-tint);
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 20px;
+    transform: all 0.3s ease;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+}
+.btn:hover,
+.btn:active{
+    /* box-shadow: 0 2rem 2rem 0 rgb(132 144 255 / 30%); */
+    box-shadow: var(--shadowsupport);
+   
+}
+.common-heading{
+    font-size: 3.8rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    text-transform: capitalize;
+    position: relative;
+}
+.common-heading::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top: 110%;
+    width: 1.5rem;    
+    height: 1.5rem;
+    background: var(--helper);
+    border-radius: 50%;
+}
+.common-heading::after{
+   content: "";
+   position: absolute;
+   top: 118%; 
+   left: 1.5rem;
+   min-width: 20rem;
+   height: .3rem;
+   background-color: var(--helper);
+}
+.section-hero{
+    background-color: rgba(0, 157, 255, 0.164);
+}
+.section-hero-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-start; */
+}
+.hero-top-data{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--helper);
+}
+.hero-img{
+    max-width: 80%;
+    /* width: 80%; */
+}
+.hero-heading{
+    text-transform: uppercase;
+    font-size: 700;
+    font-size: 6.4rem;
+}
+.hero-para{
+   margin-top: 1.5rem;
+   margin-bottom: 5rem;
+   max-width: 60rem;
+}
+.section-hero-iamge{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+ }
+
+ /* --------------Bio Section------------------ */
+ .bio-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .bio-image img{
+    width: 80%;
+    box-shadow: -2rem -2rem 0 0 var(--helper);
+    display: inline-block;
+ }
+ .bio-data-stats{
+    display: flex;
+    padding: 5.4rem 0;
+    flex-direction: column;
+    gap: 2rem;
+}
+.bio-stats h3{
+    margin-bottom: 1rem;
+}
+.bio-progress-bar{
+    width: 90%;
+    height: 0.8rem;
+    background-color: var(--para-tint);
+    border-radius: 10rem;
+    position: relative;
+}
+.bio-progress-bar::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: inherit;
+    background: var(--helper);
+    border-radius: 10rem;
+}
+.bio-progress-bar-2::before{
+    width: 50%;
+}
+.bio-progress-bar-3::before{
+    width: 80%;
+}
+.bio-progress-bar-4::before{
+    width: 70%;
+}
+.bio-progress-bar-5::before{
+    width: 90%;
+}
+.bio-progress-bar-6::before{
+    width: 80%;
+}
+.bio-progress-bar span{
+    position: absolute;
+    top: 1.8rem;
+    width: 40px;
+    height: 2rem;
+    background: var(--helper);
+    color: #f3f4ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+}
+.bio-progress-bar span{
+    left: 64%;
+}
+.bio-progress-bar-2 span{
+    left: 44%;
+}
+.bio-progress-bar-3 span{
+    left: 74%;
+}
+.bio-progress-bar-4 span{
+    left: 64%;
+}
+.bio-progress-bar-5 span{
+    left: 84%;
+}
+.bio-progress-bar-6 span{
+    left: 74%;
+}
+/* create a caret */
+.bio-progress-bar span::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0.8rem solid var(--helper);
+    border-color:transparent;
+    border-block-color: var(--helper);
+    top: -1.6rem;
+}
+
+/* project section  */
+.projects-section{
+    background: var(--bg);
+    transition: all 0.7s linear;
+}
+.projects-section p{
+   max-width: 60rem; 
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+    margin-top: 6.4rem;
+}
+.projects-images{
+    gap: 3.2rem;
+    margin-top: 6.4rem;
+}
+.projects-images img{
+    width: 100%;
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+}
+.img-overlay{
+    position: relative;
+    overflow: hidden;
+}
+.img-overlay .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--helper);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: all 0.3s linear;
+    border-radius: 7px;
+}
+.img-overlay:hover > .overlay{
+    transform: translateY(0);
+    opacity: 0.8;
+    cursor: pointer;
+}
+.img-overlay .common-heading{
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+/* ----------------------------COntact Us-------------- */
+.section-contact-main{
+    max-width: 70rem;
+    margin: 0 auto;
+    margin-top: 9rem;
+    transition: all0.3s linear;
+}
+.section-contact-main form{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+.section-contact-main input, .section-contact-main textarea{
+    padding: 1.5rem 2rem;
+    border: 0.1rem solid #c9c9c9;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-family: "work sans";
+    width: 100%;
+} 
+.section-contact-main input[type="submit"]{
+    max-width: 30%;
+    border: none;
+}
+
+/* --------------footer------------------ */
+
+.section-footer{
+   background: var(--heading); 
+   transition: all 0.7s linear;
+   margin-top: 4rem;
+}
+.section-footer h3{
+    color: var(--white);
+    margin-bottom: 4rem;
+}
+.f-about p{
+    color: #adadad;
+}
+.f-links ul , .f-skills ul, .f-address address{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    justify-content: center;
+}
+.f-links li,
+.f-links a,
+.f-skills li,
+.f-skills a{
+    font-size: 1.8rem;
+    color: #adadad;
+    text-transform: capitalize;
+}
+.f-links span,
+.f-skills span,
+.f-address span{
+    margin-right: 1rem;
+}
+.f-address p,
+.f-address p a{
+    font-style: normal;
+    columns: #adadad;
+}
+.f-social-links{
+    margin: 5rem 0;
+    text-align: center;
+    color: #adadad;
+}
+.f-social-links .icons{
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(144, 172, 288,0.2);
+    display: inline-block;
+    padding: 1.4rem 1.8rem;
+}
+.copyright p{
+    text-align: center;
+    color: #adadad;
+}
+.footer a:hover,
+.footer a:active{
+    color: var(--white);
+}
